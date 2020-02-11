@@ -1,0 +1,16 @@
+default: &default
+adapter: postgresql
+encoding: unicode
+pool:
+
+development:
+<<: *default
+database: passfortWiki
+
+production:
+<<: *default
+database: passfortWiki
+
+test:
+<<: *default
+database: passfortWiki_test
