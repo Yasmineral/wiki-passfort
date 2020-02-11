@@ -16,7 +16,11 @@ class Wiki < Sinatra::Base
   get '/documents/:title' do
     title = params[:title].split("-").join(" ")
     document = Title.find_by(title: title)
-    Revision.create(title_id: document.id, content: "test content")
+    document_id = document.id
+    entries = Revision.where(title_id: document_id)
+    content = []
+    entries.each { |entry| content.push(entry.content) }
+    "Revisions: " + content.join(", ")
   end
 
   run! if app_file == $PROGRAM_NAME
