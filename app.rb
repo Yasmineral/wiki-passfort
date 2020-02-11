@@ -13,9 +13,10 @@ class Wiki < Sinatra::Base
     Title.display_all
   end
 
-  get 'documents/:title' do
-    title = Title.first
-    Revision.create(title_id: title.id, content: "hiya")
+  get '/documents/:title' do
+    title = params[:title].split("-").join(" ")
+    document = Title.find_by(title: title)
+    Revision.create(title_id: document.id, content: "test content")
   end
 
   run! if app_file == $PROGRAM_NAME

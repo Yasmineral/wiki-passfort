@@ -3,8 +3,11 @@
     "coverage": {
       "/Users/yaskemp/Desktop/MyCode/wiki-code-test/spec/title_spec.rb": [
         1,
+        1,
         null,
         1,
+        null,
+        null,
         1,
         1,
         2,
@@ -13,11 +16,31 @@
         1,
         1,
         1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        4,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/yaskemp/Desktop/MyCode/wiki-code-test/spec/database_helper.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
         null,
         null,
         null
       ]
     },
-    "timestamp": 1581426946
+    "timestamp": 1581438394
   }
 }
