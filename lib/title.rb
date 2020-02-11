@@ -6,4 +6,11 @@ class Title < ActiveRecord::Base
     raise "Title invalid: exceeds 50 characters" if title.length > 50
     title
   end
+
+  def self.display_all
+    documents = Title.all
+    titles = []
+    documents.each { |document| titles.push(document.title) }
+    "Titles: " + titles.join(", ")
+  end
 end

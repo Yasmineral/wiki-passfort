@@ -10,7 +10,7 @@ class Wiki < Sinatra::Base
   set :database_file, 'config/database.yml'
 
 get '/documents' do
-  
+  Title.display_all
 end
 
 
