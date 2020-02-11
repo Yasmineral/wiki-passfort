@@ -5,12 +5,8 @@ pool:
 
 development:
 <<: *default
-database: passfortWiki
+database: passfortWiki_test
 
 production:
 <<: *default
 database: passfortWiki
-
-test:
-<<: *default
-database: passfortWiki_test
