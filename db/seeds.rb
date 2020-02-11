@@ -4,3 +4,5 @@ wiki_titles = [
   {title: 'History of Art'}
 ]
 wiki_titles.each { |title| Title.create(title) }
+
+
