@@ -11,4 +11,10 @@ describe Wiki do
       expect(last_response.status).to eq 400
     end
   end
+  # context 'POST /documents/:title' do
+  #   it 'returns status 200 OK' do
+  #     post '/documents/history-of-science'
+  #     content = "Revision text"
+  #   end
+  # end
 end

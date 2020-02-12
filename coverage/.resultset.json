@@ -15,6 +15,12 @@
         1,
         null,
         null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         null
       ],
       "/Users/yaskemp/Desktop/MyCode/wiki-code-test/spec/title_spec.rb": [
@@ -27,6 +33,12 @@
         1,
         1,
         2,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
         null,
         null,
         1,
@@ -48,6 +60,6 @@
         null
       ]
     },
-    "timestamp": 1581507494
+    "timestamp": 1581508832
   }
 }

@@ -20,5 +20,9 @@ class Title < ActiveRecord::Base
     document = Title.find_by(title: title)
     return document.id
   end
+
+  def self.format_title(title)
+    return title.split("-").join(" ")
+  end
 end
 

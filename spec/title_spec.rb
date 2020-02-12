@@ -15,4 +15,10 @@ describe Title do
       expect(Title.display_all).to include("Titles: History of science, History of literature, History of art")
     end
   end
+  describe ".format_title" do
+    it "re-formats the title param into searchable text" do
+      title = Title.format_title("history-of-science")
+      expect(title).to eq("history of science")
+    end
+  end
 end

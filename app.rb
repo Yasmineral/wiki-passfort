@@ -25,5 +25,12 @@ class Wiki < Sinatra::Base
     end
   end
 
+  post '/documents/:title' do
+    content = request.body.read
+    Revision.create([content: content])
+    
+
+  end
+
   run! if app_file == $PROGRAM_NAME
 end
