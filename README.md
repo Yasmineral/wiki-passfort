@@ -37,11 +37,11 @@ It should receive JSON in the form: {content: ‘new content...’}.
 ```
 curl http://localhost:4567/documents 
 ```
-![alt text](documents.png "documents")
+![alt text](../documents.png "documents")
 
-![alt text](documents 200.png "documents2")
+![alt text](../documents_200.png "documents2")
 
-![alt text](get documents_400.png "documents3")
+![alt text](../documents_400.png "documents3")
 
 
 2. Resturn list of available revisions for a document
