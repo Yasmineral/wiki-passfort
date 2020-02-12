@@ -37,12 +37,11 @@ It should receive JSON in the form: {content: ‘new content...’}.
 ```
 curl http://localhost:4567/documents 
 ```
-![alt text](../documents.png "documents")
+![Alt text](https://github.com/Yasmineral/wiki-passfort/blob/master/screenshots/documents.png "documents")
 
-![alt text](../documents_200.png "documents2")
+![Alt text](https://github.com/Yasmineral/wiki-passfort/blob/master/screenshots/documents_200.png "documents200")
 
-![alt text](../documents_400.png "documents3")
-
+![Alt text](https://github.com/Yasmineral/wiki-passfort/blob/master/screenshots/documents_400.png "documents400")
 
 2. Resturn list of available revisions for a document
 
@@ -50,15 +49,24 @@ curl http://localhost:4567/documents
 curl http://localhost:4567/documents/history-of-science
 ```
 
+![Alt text](https://github.com/Yasmineral/wiki-passfort/blob/master/screenshots/revisions.png "revisions")
+
 3. Post a new revision of a document
 
 ```
 curl -d '{"content": "LATEST content"}' -X POST http://localhost:4567/documents/history-of-science
 ```
 
+![Alt text](https://github.com/Yasmineral/wiki-passfort/blob/master/screenshots/post%20_success.png "post")
+
 ## Run tests
-1. Run `rspec` from command line to check tests. This app has over 100% coverage.
+1. Run `rspec` from command line to check tests. This app currently has 100% coverage.
+
+![Alt text](https://github.com/Yasmineral/wiki-passfort/blob/master/screenshots/rspec.png "rspec")
+
 2. Run `rubocop` from command line to check linter.
+
+![Alt text](https://github.com/Yasmineral/wiki-passfort/blob/master/screenshots/rubocop.png "rubocop)
 
 ## Development
 
