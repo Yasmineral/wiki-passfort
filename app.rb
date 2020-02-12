@@ -27,9 +27,10 @@ class Wiki < Sinatra::Base
 
   post '/documents/:title' do
     content = request.body.read
-    Revision.create([content: content])
-    
-
+    title = Title.format_title(params[:title])
+    document_id = Title.find_id(title)
+    Revision.create([content: content, title_id: document_id])
+    p "revision created!"
   end
 
   run! if app_file == $PROGRAM_NAME
