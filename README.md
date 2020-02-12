@@ -13,15 +13,15 @@ any timestamp to fetch a revision e.g. If we have a document at time 1pm and tim
 then sending a timestamp of 2pm should return the document as it was at time 1pm.
 Your task is to implement a JSON api with the following endpoints:
 
-GET /documents
+* GET /documents
 This should return a list of available titles.
-GET /documents/<title>
+* GET /documents/<title>
 This should return a list of available revisions for a document.
-GET /documents/<title>/<timestamp>
+* GET /documents/<title>/<timestamp>
 This should return the document as it was at that timestamp.
-GET /documents/<title>/latest
+* GET /documents/<title>/latest
 This should return the current latest version of the document.
-POST /documents/<title>
+* POST /documents/<title>
 This allows users to post a new revision of a document.
 It should receive JSON in the form: {content: ‘new content...’}. 
 
