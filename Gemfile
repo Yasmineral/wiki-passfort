@@ -1,10 +1,10 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
+gem 'activerecord'
+gem 'pg'
 gem 'rake'
 gem 'sinatra'
 gem 'sinatra-activerecord'
-gem 'activerecord'
-gem 'pg'
 
 group :development, :test do
   gem 'rack-test'
@@ -14,5 +14,3 @@ group :development, :test do
   gem 'simplecov', require: false
   gem 'simplecov-console', require: false
 end
-
-
