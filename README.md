@@ -49,7 +49,7 @@ curl http://localhost:4567/documents
 
 ![Alt text](https://github.com/Yasmineral/wiki-passfort/blob/master/screenshots/documents_400.png "documents400")
 
-2. Resturn list of available revisions for a document
+2. Return list of available revisions for a document
 
 ```
 curl http://localhost:4567/documents/history-of-science
@@ -77,7 +77,7 @@ curl -d '{"content": "LATEST content"}' -X POST http://localhost:4567/documents/
 ## Development
 
 ### Key decisions and challenges
-I decided to use Sinatra over Rails for this application given it's small size and needing to get up and running in good time. My database set up was set up in Postgres via ActiveRecord as this is what I have the most experience using. I decided to create a table that just listed the titles of each document, and establish a 'has_many' relationship with a revisions table documenting the content of each file across numerous time stamps. Ideally, I wanted to avoid querying both tables in order to retrieve & post revisions as this is not a very streamlined work flow, so given more time I would have liked to explore a way to avoid this. Currently, the content of the file is being retured as a json object so I'd have also liked to created a method that extracts only what I need and displays it as a string. 
+I decided to use Sinatra over Rails for this application given it's small size and needing to get up and running in good time. My database set up was set up in Postgres via ActiveRecord as this is what I have the most experience using. I decided to create a table that just listed the titles of each document, and establish a 'has_many' relationship with a revisions table documenting the content of each file across numerous time stamps. Ideally, I wanted to avoid querying both tables in order to retrieve & post revisions as this is not a very streamlined workflow, so given more time I would have liked to explore a way to avoid this. Currently, the content of the file is being returned as a json object so I'd have also liked to create a method that extracts only what I need and displays it as a string. 
 
 
 ### Testing
