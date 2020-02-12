@@ -13,4 +13,11 @@ class Title < ActiveRecord::Base
     documents.each { |document| titles.push((document.title).capitalize) }
     "Titles: " + titles.join(", ")
   end
+
+  def self.find_id(title)
+    title = title.split("-").join(" ")
+    document = Title.find_by(title: title)
+    return document.id
+  end
 end
+

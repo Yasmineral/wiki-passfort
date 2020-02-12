@@ -14,13 +14,15 @@ class Wiki < Sinatra::Base
   end
 
   get '/documents/:title' do
-    title = params[:title].split("-").join(" ")
-    document = Title.find_by(title: title)
-    document_id = document.id
-    entries = Revision.where(title_id: document_id)
-    content = []
-    entries.each { |entry| content.push(entry.content) }
-    "Revisions: " + content.join(", ")
+    if Title.exists?(title: params[:title])
+      document_id = Title.find_id(params[:title])
+      entries = Revision.where(title_id: document_id)
+      content = []
+      entries.each { |entry| content.push(entry.content) }
+      p "Revisions: " + content.join(" , ")
+    else
+      return status 400
+    end
   end
 
   run! if app_file == $PROGRAM_NAME
