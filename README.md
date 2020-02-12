@@ -27,9 +27,15 @@ It should receive JSON in the form: {content: ‘new content...’}.
 
 ## How to install and run
 1. Clone this repository
-2. In your command line
-* Run `bundle install` to install dependencies
-* Run `ruby app.rb` to start up the server
+2. In your command line:
+
+```bash
+> bundle install
+> rake db:create  
+> rake db:migrate
+```
+
+3. Run `ruby app.rb` to start up the server
 
 ## Using the app
 1. Request list of available titles
@@ -66,11 +72,12 @@ curl -d '{"content": "LATEST content"}' -X POST http://localhost:4567/documents/
 
 2. Run `rubocop` from command line to check linter.
 
-![Alt text](https://github.com/Yasmineral/wiki-passfort/blob/master/screenshots/rubocop.png "rubocop)
+![Alt text](https://github.com/Yasmineral/wiki-passfort/blob/master/screenshots/rubocop.png "rubocop")
 
 ## Development
 
 ### Key decisions and challenges
+I decided to use Sinatra over Rails for this application given it's small size and needing to get up and running in good time. My database set up was set up in Postgres via ActiveRecord as this is what I have the most experience using. I decided to create a table that just listed the titles of each document, and establish a 'has_many' relationship with a revisions table documenting the content of each file across numerous time stamps. Ideally, I wanted to avoid querying both tables in order to retrieve & post revisions as this is not a very streamlined work flow, so given more time I would have liked to explore a way to avoid this. Currently, the content of the file is being retured as a json object so I'd have also liked to created a method that extracts only what I need and displays it as a string. 
 
 
 ### Testing
