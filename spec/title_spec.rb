@@ -11,6 +11,7 @@ describe Title do
   end
   describe ".display_all" do
     it "returns all available titles" do
+      connect_to_database
       expect(Title.display_all).to include("Titles: History of science, History of literature, History of art")
     end
   end

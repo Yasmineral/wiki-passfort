@@ -1,8 +1,7 @@
 require 'pg'
 
-def setup_test_database
+def connect_to_database
   connection = PG.connect(dbname: 'passfortWiki')
-  connection.exec('TRUNCATE TABLE titles;')
 end
 
 

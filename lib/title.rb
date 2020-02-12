@@ -10,8 +10,9 @@ class Title < ActiveRecord::Base
   def self.display_all
     documents = Title.all
     titles = []
-    documents.each { |document| titles.push((document.title).capitalize) }
-    "Titles: " + titles.join(", ")
+    documents.each { |document| titles.push(document.title) }
+    display_titles = titles.map(&:capitalize).join(', ')
+    "Titles: " + display_titles
   end
 
   def self.find_id(title)

@@ -1,6 +1,22 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/yaskemp/Desktop/MyCode/wiki-code-test/spec/app_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        2,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
       "/Users/yaskemp/Desktop/MyCode/wiki-code-test/spec/title_spec.rb": [
         1,
         1,
@@ -16,6 +32,7 @@
         1,
         1,
         1,
+        1,
         null,
         null,
         null
@@ -24,14 +41,13 @@
         1,
         null,
         1,
-        0,
-        0,
+        1,
         null,
         null,
         null,
         null
       ]
     },
-    "timestamp": 1581438724
+    "timestamp": 1581507494
   }
 }
