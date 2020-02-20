@@ -27,7 +27,7 @@ curl http://localhost:4567/documents
 2. Return list of available revisions for a document
 
 ```
-curl http://localhost:4567/documents/history-of-science
+curl http://localhost:4567/documents/history-of-literature
 ```
 
 ![Alt text](https://github.com/Yasmineral/wiki-passfort/blob/master/screenshots/revisions.png "revisions")
